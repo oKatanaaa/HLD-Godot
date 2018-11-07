@@ -1,11 +1,13 @@
-extends Area2D
+extends Node2D
 
 # class member variables go here, for example:
 # var a = 2
 # var b = "textvar"
 
-func getDamage():
-	self.get_overlapping_bodies()
+func _ready():
+	if typeof($drifter) == TYPE_MAX:
+		print("Type is " + str(typeof($drifter)))
+	pass
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.

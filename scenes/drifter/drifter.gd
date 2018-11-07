@@ -48,3 +48,8 @@ func controls_loop():
 	moveDir.x = -int(LEFT) + int(RIGHT)
 	moveDir.y = -int(UP) + int(DOWN)
 	
+
+# Receives a "area_entered" signal from hitbox_collision
+func collide_with_smth(body):
+	if body.TYPE == "hitbox" or true:
+		print("get damage")
