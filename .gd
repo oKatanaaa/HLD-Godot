@@ -1,6 +1,4 @@
-extends Camera2D
-
-
+extends Node
 
 # class member variables go here, for example:
 # var a = 2
@@ -11,7 +9,7 @@ func _ready():
 	# Initialization here
 	pass
 
-func _process(delta):
-	var root_node = get_tree().get_root().get_child(0)
-	self.position = root_node.position
-	pass
+#func _process(delta):
+#	# Called every frame. Delta is time since last frame.
+#	# Update game logic here.
+#	pass
