@@ -1,16 +1,15 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://scenes/drifter/drifter.gd" type="Script" id=1]
-[ext_resource path="res://scenes/drifter/anim.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/dirfter/spr_run_up.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/dirfter/spr_run_right.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/dirfter/spr_run_down.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/dirfter/spr_idle_right.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/dirfter/spr_idle_up.png" type="Texture" id=7]
-[ext_resource path="res://Sprites/dirfter/spr_idle_down.png" type="Texture" id=8]
-[ext_resource path="res://Sprites/dirfter/spr_attack_right.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/dirfter/spr_attack_up.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/dirfter/spr_attack_down.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/dirfter/spr_run_up.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/dirfter/spr_run_right.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/dirfter/spr_run_down.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/dirfter/spr_idle_right.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/dirfter/spr_idle_up.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/dirfter/spr_idle_down.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/dirfter/spr_attack_right.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/dirfter/spr_attack_up.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/dirfter/spr_attack_down.png" type="Texture" id=10]
 
 [sub_resource type="Animation" id=1]
 
@@ -1673,7 +1672,6 @@ anims/RunLeft = SubResource( 10 )
 anims/RunRight = SubResource( 11 )
 anims/RunUp = SubResource( 12 )
 blend_times = [  ]
-script = ExtResource( 2 )
 _sections_unfolded = [ "Playback Options" ]
 
 [node name="allSprites" type="Sprite" parent="." index="1"]
@@ -1681,7 +1679,7 @@ _sections_unfolded = [ "Playback Options" ]
 [node name="sprRunUp" type="Sprite" parent="allSprites" index="0"]
 
 visible = false
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 hframes = 12
 _sections_unfolded = [ "Animation", "Visibility" ]
 __meta__ = {
@@ -1691,7 +1689,7 @@ __meta__ = {
 [node name="sprRunRight" type="Sprite" parent="allSprites" index="1"]
 
 visible = false
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 flip_h = true
 hframes = 12
 frame = 1
@@ -1703,7 +1701,7 @@ __meta__ = {
 [node name="sprRunDown" type="Sprite" parent="allSprites" index="2"]
 
 visible = false
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 hframes = 12
 frame = 10
 _sections_unfolded = [ "Visibility" ]
@@ -1714,7 +1712,7 @@ __meta__ = {
 [node name="sprIdleRight" type="Sprite" parent="allSprites" index="3"]
 
 visible = false
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Animation", "Offset", "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1723,7 +1721,7 @@ __meta__ = {
 [node name="sprIdleUp" type="Sprite" parent="allSprites" index="4"]
 
 visible = false
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 _sections_unfolded = [ "Animation", "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1732,7 +1730,7 @@ __meta__ = {
 [node name="sprIdleDown" type="Sprite" parent="allSprites" index="5"]
 
 visible = false
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 _sections_unfolded = [ "Animation", "Visibility" ]
 __meta__ = {
 "_edit_lock_": true
@@ -1741,7 +1739,7 @@ __meta__ = {
 [node name="sprAttackRight" type="Sprite" parent="allSprites" index="6"]
 
 visible = false
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 hframes = 36
 frame = 9
 _sections_unfolded = [ "Animation", "Offset", "Visibility" ]
@@ -1751,7 +1749,7 @@ __meta__ = {
 
 [node name="sprAttackUp" type="Sprite" parent="allSprites" index="7"]
 
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 offset = Vector2( 0, -5 )
 hframes = 36
 _sections_unfolded = [ "Animation", "Offset", "Visibility" ]
@@ -1762,7 +1760,7 @@ __meta__ = {
 [node name="sprAttackDown" type="Sprite" parent="allSprites" index="8"]
 
 visible = false
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 offset = Vector2( 0, 5 )
 hframes = 36
 frame = 9
