@@ -344,9 +344,6 @@ func _ready():
 	\"AttackRight\" : get_parent().get_node(\"allSprites/sprAttackRight\")
 	}
 	
-	connect(\"animation_changed\", self, \"animation_changed\")
-
-
 func _on_anim_animation_started(anim_name):
 	for animation in animSpriteMap:
 		animSpriteMap[animation].visible = false
