@@ -85,6 +85,7 @@ func playStateLogic():
 		_:
 			print("UNKNOWN STATE!")
 
+# -----------------------------------------------STATE FUNCTIONS----------------------------------------------------------------------
 func moveLogic():
 	isAllowedSetAttackDirection = true
 	isAllowedUpdatePosition = true
@@ -119,6 +120,9 @@ func dashLogic():
 func hittedLogic():
 	pass
 
+
+# -----------------------------------------------PROPERTY FUNCTIONS----------------------------------------------------------------------
+
 func changeSprite():
 	match state:
 		State.MOVE:
@@ -149,7 +153,7 @@ func setSpriteDirection():
 		checkValue = moveDirection
 	if state == State.ATTACK:
 		# attackDirection usually doesn't contain vectors like 
-		# Vector2(1, 0) (Dir.RIGHT), but vectors like Vector(1.23124, 45.12144)
+		# Vector2(1, 0) (Dir.RIGHT), but vectors like Vector(1.23124, 45.12144).
 		# Match statement below can't math these vectors, so we get
 		# the "longest projection" on the main axises and normalize it.
 		checkValue = attackStateObject.getMainDirection(attackDirection)
@@ -183,82 +187,3 @@ func setAttackDirection():
 func updatePosition():
 	var motion = moveDirection.normalized() * speed
 	move_and_slide(motion)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#const SPEED = 6000
-#
-#var moveDir = Dir.CENTER
-#var spriteDir = "Down"
-#
-#func _physics_process(delta):
-#	controls_loop()
-#	movement_cycle(delta)
-#	spriteDir_loop()
-#	animation_cycle()
-#
-#func movement_cycle(delta):
-#	var motion = moveDir.normalized() * SPEED * delta
-#	move_and_slide(motion)
-#
-#func animation_cycle():
-#	match moveDir:
-#		Dir.CENTER:
-#			switch_anim("Idle")
-#		_:
-#			switch_anim("Run")
-#
-#func spriteDir_loop():
-#	match moveDir:
-#		Dir.LEFT:
-#			spriteDir = "Left"
-#		Dir.RIGHT:
-#			spriteDir = "Right"
-#		Dir.UP:
-#			spriteDir = "Up"
-#		Dir.DOWN:
-#			spriteDir = "Down"
-#
-#func switch_anim(animation):
-#	var newAnim = str(animation, spriteDir)
-#	if $anim.current_animation != newAnim:
-#		$anim.play(newAnim)
-#
-#
-#func controls_loop():
-#	var LEFT = Input.is_action_pressed("ui_left")
-#	var RIGHT = Input.is_action_pressed("ui_right")
-#	var UP = Input.is_action_pressed("ui_up")
-#	var DOWN = Input.is_action_pressed("ui_down")
-#
-#	moveDir.x = -int(LEFT) + int(RIGHT)
-#	moveDir.y = -int(UP) + int(DOWN)
-#
-#
-## Receives an "area_entered" signal from hitbox_collision
-#func collide_with_smth(body):
-#	if body.get == "hitbox" or true:
-#		print("get damage")
-#
-#
-#func fun():
-#	print(a)
