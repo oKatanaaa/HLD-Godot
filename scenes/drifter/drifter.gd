@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-# Thess classes contain some of the logic of the state.
-# I passed part of logic into the classes in order to organize code and
+# Thess classes contain some of the logic of the states.
+# I passed part of logic into the classes in order to organize code and make it
 # easier to read, because big amount of functions in one place(in this case in main drifter's class) makes code
 # harder to read and understand, because sometimes you don't for what this
 # function is, but if you see this function in a particular class it makes everything cleaner
@@ -187,3 +187,7 @@ func setAttackDirection():
 func updatePosition():
 	var motion = moveDirection.normalized() * speed
 	move_and_slide(motion)
+
+
+func animation_changed(old_name, new_name):
+	pass # replace with function body
